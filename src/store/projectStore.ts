@@ -100,7 +100,7 @@ export const useProjectStore = create<ProjectStore>()(
       },
       
       updateProjectPhase: (phase: ProjectPhase) => {
-        const { currentProjectId, projects } = get();
+        const { currentProjectId } = get();
         if (!currentProjectId) return;
         
         set((state) => ({

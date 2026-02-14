@@ -1,5 +1,6 @@
 import React from 'react';
-import type { WorkflowStep, ProjectPhase } from '../../data/workflows';
+import type { WorkflowStep } from '../../data/workflows';
+import type { ProjectPhase } from '../../types';
 
 interface WorkflowNavProps {
   steps: WorkflowStep[];
@@ -7,7 +8,7 @@ interface WorkflowNavProps {
   onStepClick: (step: ProjectPhase) => void;
 }
 
-export const WorkflowNav: React.FC<WorkflowNavProps> = ({ steps, currentStep, onStepClick }) => {
+export const WorkflowNav: React.FC<WorkflowNavProps> = ({ steps, onStepClick }) => {
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
       <h3 className="text-lg font-heading font-semibold text-text mb-4">制作流程</h3>
